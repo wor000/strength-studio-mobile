@@ -11,12 +11,10 @@ import {
 import * as SplashScreen from 'expo-splash-screen';
 import { AuthProvider } from '@/src/hooks/useAuth';
 import { GymProvider } from '@/src/contexts/GymContext'
-import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete
 SplashScreen.preventAutoHideAsync();
 
-// Required framework initialization hook
 function useFrameworkReady() {
   const [fontsLoaded, fontError] = useFonts({
     'Inter-Regular': Inter_400Regular,
